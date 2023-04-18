@@ -1,4 +1,5 @@
 import './App.css';
+import { Calculator } from './apps/calculator';
 
 function hello(user) {
   if (user) {
@@ -46,7 +47,6 @@ function App() {
   // forEach
   // map
 
-
   // <tr><td>11</td><td>5670</td><td>2018</td></tr>
   const salaries = user.salaries.map((salary, index) => {
     return <tr><td>{index + 1}</td><td>{salary.salary}</td><td>{salary.from_date}</td></tr>
@@ -61,6 +61,12 @@ function App() {
       <p>Sum: {a + b}</p>
 
       <p>{c}, {name}</p>
+
+      {/* <p>{Calculator()}</p> */}
+      {/* <Calculator user={user} a={'text'} b={b}/> */}
+      <Calculator/>
+      <Calculator/>
+      <Calculator/>
 
       <table>
         <thead>
