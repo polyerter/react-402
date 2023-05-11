@@ -1,6 +1,7 @@
 import './App.css';
 import { Calculator } from './apps/calculator';
 import Welcome from './apps/welcome';
+import Salaries from './apps/salaries';
 
 function hello(user) {
   if (user) {
@@ -58,7 +59,7 @@ function App() {
 
   // comment
   return (
-    <div> 
+    <div>
       <p>A: {a}</p>
       <p>B: {b}</p>
 
