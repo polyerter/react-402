@@ -2,6 +2,9 @@ import './App.css';
 import { Calculator } from './apps/calculator';
 import Welcome from './apps/welcome';
 import Salaries from './apps/salaries';
+import Employees from './apps/employees';
+import Profile from './apps/profile';
+
 
 function hello(user) {
   if (user) {
@@ -58,26 +61,27 @@ function App() {
   // map
 
   // <tr><td>11</td><td>5670</td><td>2018</td></tr>
-
-
   // comment
   return (
     <div>
-      <p>A: {a}</p>
+      {/* <p>A: {a}</p>
       <p>B: {b}</p>
 
       <p>Sum: {a + b}</p>
 
-      <p>{c}, {name}</p>
+      <p>{c}, {name}</p> */}
 
       {/* <p>{Calculator()}</p> */}
       {/* <Calculator user={user} a={'text'} b={b}/> */}
-      <Calculator/>
-      <Calculator/>
-      <Calculator/>
+      {/* <Calculator/> */}
+      {/* <Calculator/> */}
+      {/* <Calculator/> */}
 
-      <Welcome user={user} label='red'/>
-      <Salaries salaries={user.salaries}/>
+      {/* <Welcome user={user} label='red'/> */}
+      {/* <Salaries salaries={user.salaries}/> */}
+      {/* <Employees employees={employees}/> */}
+      
+      <Profile user={employees[1]}/>
       
     </div>
   );
