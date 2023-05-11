@@ -53,9 +53,7 @@ function App() {
   // map
 
   // <tr><td>11</td><td>5670</td><td>2018</td></tr>
-  const salaries = user.salaries.map((salary, index) => {
-    return <tr key={index}><td>{index + 1}</td><td>{salary.salary}</td><td>{salary.from_date}</td></tr>
-  });
+
 
   // comment
   return (
@@ -74,7 +72,7 @@ function App() {
       <Calculator/>
 
       <Welcome user={user} label='red'/>
-      <Salaries items={salaries}/>
+      <Salaries salaries={user.salaries}/>
       
     </div>
   );
