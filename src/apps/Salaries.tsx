@@ -1,5 +1,6 @@
 import React from "react";
 
+
 interface SalariesProps {
     salaries: [
         {
@@ -9,15 +10,22 @@ interface SalariesProps {
     ]
 }
 
+class SalaryRow extends React.Component {
+    render() {
+        return '';
+        // return <tr key={index}><td>{index + 1}</td><td>{salary.salary}</td><td>{salary.from_date}</td></tr>
+    }
+}
+
 class Salaries extends React.Component<SalariesProps> {
     render() {
         const {salaries} = this.props;
 
         const salaries_rows = salaries.map((salary, index) => {
-            return <tr key={index}><td>{index + 1}</td><td>{salary.salary}</td><td>{salary.from_date}</td></tr>
+            return <SalaryRow/>
         });
 
-        return <table>
+        return <table className="table">
             <thead>
             <tr>
                 <th>#</th>

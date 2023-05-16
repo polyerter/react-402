@@ -14,7 +14,12 @@ class Profile extends React.Component<ProfileProps> {
 
         return <>
             <Detail user={user}/>
-            <Salaries salaries={user.salaries}/>
+
+            {
+                user.salaries ?
+                <Salaries salaries={user.salaries} /> 
+                : ''  
+            }
         </>;
     }
 }

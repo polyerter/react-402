@@ -4,6 +4,9 @@ import Welcome from './apps/welcome';
 import Salaries from './apps/salaries';
 import Employees from './apps/employees';
 import Profile from './apps/profile';
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import Menu from './apps/menu';
 
 
 function hello(user) {
@@ -63,7 +66,9 @@ function App() {
   // <tr><td>11</td><td>5670</td><td>2018</td></tr>
   // comment
   return (
-    <div>
+    <div className='container'>
+      <Menu/>
+
       {/* <p>A: {a}</p>
       <p>B: {b}</p>
 
@@ -82,7 +87,6 @@ function App() {
       {/* <Employees employees={employees}/> */}
       
       <Profile user={employees[1]}/>
-      
     </div>
   );
 }

@@ -7,5 +7,5 @@ export interface IUser {
     birth_date: string,
     gender: string,
     hire_date: string,
-    salaries: [ISalary]
+    salaries?: [ISalary]
 }
