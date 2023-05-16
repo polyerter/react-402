@@ -25,18 +25,28 @@ class Salaries extends React.Component<SalariesProps> {
             return <SalaryRow/>
         });
 
-        return <table className="table">
-            <thead>
-            <tr>
-                <th>#</th>
-                <th>Salary</th>
-                <th>Date</th>
-            </tr>
-            </thead>
-            <tbody>
-                {salaries_rows}
-            </tbody>
-        </table>; 
+        const filter_form = <form action="#">
+            <input type="text" onKeyDown={(e) => {
+                let el = (e.target as HTMLElement).val;
+                console.log(el)
+            }} />
+            </form>
+
+        return <>
+            {filter_form}
+            <table className="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Salary</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {salaries_rows}
+                </tbody>
+            </table>
+        </>; 
     }
 }
 
